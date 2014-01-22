@@ -1,0 +1,30 @@
+@(message: String)
+
+@main("Welcome to Play") {
+
+
+
+<svg id="heartbeat"></svg>
+<script>
+var heartbeat = d3.select("#heartbeat")
+    .append("svg").attr("width", 200).attr("height", 200)
+    .append("circle")
+    .attr("cx", 100)
+    .attr("cy", 100)
+    .attr("r", 30)
+    .attr("fill", "red");
+
+  var feed = new EventSource("/cpu");
+
+  function handler(msg) {
+    //var data = JSON.parse(msg.data);
+    console.log(msg.data);
+    heartbeat.transition().duration(70).attr("r", 70)
+      .transition().duration(70).attr("r", 30)
+      .transition().duration(70).attr("r", 60)
+      .transition().duration(70).attr("r", 30);
+  }
+  feed.addEventListener("message", handler, false);
+</script>
+
+}

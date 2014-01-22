@@ -1,0 +1,26 @@
+@(message: String)
+
+@main("Welcome to Play") {
+<style>
+
+    svg {
+    font: 10px sans-serif;
+    }
+
+    .line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1.5px;
+    }
+
+    .axis path,
+    .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    }
+
+</style>
+<script src="@routes.Assets.at("javascripts/build/spline.js")" type="text/javascript"></script>
+
+}
