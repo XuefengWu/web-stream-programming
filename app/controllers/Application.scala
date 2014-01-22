@@ -9,14 +9,6 @@ import play.api.libs.concurrent.Execution.Implicits._
 
 object Application extends Controller {
 
-  def spline = Action {
-    Ok(views.html.spline("Your new application is ready."))
-  }
-
-  def multi = Action {
-    Ok(views.html.multi("Your new application is ready."))
-  }
-
   def index = Action {
     Ok(views.html.index("Your new application is ready."))
   }
