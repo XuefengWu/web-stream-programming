@@ -20,14 +20,7 @@
                 data: d3.range(limit).map(function() {
                     return 0
                 })
-            }/*,
-            output: {
-                value: 0,
-                color: 'grey',
-                data: d3.range(limit).map(function() {
-                    return 0
-                })
-            }*/
+            }
         }
 
         var x = d3.time.scale()

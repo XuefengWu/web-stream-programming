@@ -1,7 +1,7 @@
 function Gauge(placeholderName, configuration)
 {
 	this.placeholderName = placeholderName;
-	
+
 	var self = this; // for internal d3 functions
 	
 	this.configure = function(configuration)
@@ -30,6 +30,7 @@ function Gauge(placeholderName, configuration)
 
 	this.render = function()
 	{
+
 		this.body = d3.select("#" + this.placeholderName)
 							.append("svg:svg")
 							.attr("class", "gauge")
@@ -263,8 +264,6 @@ function Gauge(placeholderName, configuration)
 
 	function createGauge(name, label, min, max)
     {
-        console.log(name);
-
         var config =
         {
             size: 120,
